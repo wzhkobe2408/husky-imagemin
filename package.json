@@ -1,0 +1,34 @@
+{
+  "name": "husky-imagemin",
+  "version": "1.0.0",
+  "description": "optimize image before git commit",
+  "main": "index.js",
+  "bin": {
+    "husky-imagemin": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "hooks",
+    "husky",
+    "imagemin"
+  ],
+  "author": "wzhkobe2408@gmail.com",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-overwrite": "^7.0.1",
+    "imagemin-pngquant": "^9.0.1",
+    "mime": "^2.4.6",
+    "shelljs": "^0.8.4"
+  },
+  "files": [
+    "/src",
+    "/bin"
+  ]
+}
