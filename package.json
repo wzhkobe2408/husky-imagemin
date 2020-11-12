@@ -1,11 +1,11 @@
 {
   "name": "husky-imagemin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "optimize image before git commit",
   "main": "src/imagemin.js",
   "repository": "wzhkobe2408/husky-imagemin",
   "bin": {
-    "husky-imagemin": "./bin/index.js"
+    "husky-imagemin": "./bin/husky-imagemin"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
