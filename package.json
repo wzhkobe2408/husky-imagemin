@@ -1,8 +1,9 @@
 {
   "name": "husky-imagemin",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "optimize image before git commit",
-  "main": "index.js",
+  "main": "src/imagemin.js",
+  "repository": "wzhkobe2408/husky-imagemin",
   "bin": {
     "husky-imagemin": "./bin/index.js"
   },
