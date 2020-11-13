@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+# husky-imagemin
 
-You can use the [editor on GitHub](https://github.com/wzhkobe2408/husky-imagemin/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+automatically optimize newly added image before commit
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[![NPM](https://img.shields.io/npm/v/husky-imagemin.svg)](https://www.npmjs.com/package/husky-imagemin) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Downloads/week](https://img.shields.io/npm/dw/husky-imagemin.svg)](https://npmjs.org/package/husky-imagemin)
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Install
+```bash
+npm install husky-imagemin --save-dev
+or
+yarn add husky-imagemin -D
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## How to use
 
-### Jekyll Themes
+### Basic usage
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wzhkobe2408/husky-imagemin/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+add command to husky hooks config, if already use lint-stage, you can use `&&` to concat husky-imagemin
+```json
+"husky": {
+    "hooks": {
+        "pre-commit": "lint-staged && husky-imagemin"
+    }
+}
+```
+
+### Custom usage
+
+you can specific large image definination by pass parameter to husky-imagemin, default large image definination is `> 50kb`
+```json
+"husky": {
+    "hooks": {
+        "pre-commit": "lint-staged && husky-imagemin --size=100"
+    }
+}
+```
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Feel free to create issue or make pr to contribute
